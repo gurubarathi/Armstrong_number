@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+ <input type=number placeholder="enter a no" id="inputs" value="">
+ <button type="submit" id="btn">Find Armstrong</button>
+ <p id="demo"></p>
+
+<script>
+
+  
+  btn.addEventListener("click",myFunction);
+  
+  function myFunction(){
+    var input = document.getElementById("inputs");
+    var values=input.value;
+   var sum= input.value;
+   var check=input.value;
+   var result=0;
+   let count = 0;
+   while(sum>0){
+    var rms= sum%10;
+	 sum=(sum-rms)/10;
+	 count+=1;
+   }
+   
+  while(values>0){
+    var remain = values%10;
+	   values = (values-remain)/10;
+	 result+=remain**count; 
+    }
+  
+   let p=document.getElementById("demo");
+   
+   if(check==result){
+     p.innerHTML= check+" is Armstrong number"
+   }else{
+      p.innerHTML= check+ " is  not Armstrong number";
+   }
+   input.value="";
+  }
+  
+</script>
+</body>
+</html>
